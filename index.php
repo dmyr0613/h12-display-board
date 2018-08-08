@@ -52,8 +52,8 @@ foreach ($events as $event) {
   if ($SectionName == '病院からのお知らせ'){
     //リッチメニューから「病院からのお知らせ」
     $messageStr = '外来診療日：月曜日～金曜日（祝日年末年始を除く） ';
-    $messageStr = $messageStr . "\r\n" . '午前：08:00～11:00（再来受診のみ11:30）';
-    $messageStr = $messageStr . "\r\n" . '　※整形外科の初診の受付は、午前10時までとなります。';
+    $messageStr = $messageStr . "\r\n" . '午前：08:00～11:00（再来のみ11:30）';
+    //$messageStr = $messageStr . "\r\n" . '　※整形外科の初診の受付は、午前10時までとなります。';
     $messageStr = $messageStr . "\r\n" . '午後：12:00～15:00（予約のみ）';
     $messageStr = $messageStr . "\r\n";
     $messageStr = $messageStr . "\r\n" . '※初診の場合は、かかりつけ医からの当院宛の紹介状をお持ちください。';
