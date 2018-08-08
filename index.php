@@ -178,6 +178,7 @@ foreach ($events as $event) {
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('内科','内科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('消化器内科','消化器内科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('神経内科','神経内科'));
+      array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('神経内科','神経内科'));
       $column = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder (
         '診療科選択1', '診療科を選択してください。', null, $actionArray);
       // 配列に追加
@@ -188,6 +189,7 @@ foreach ($events as $event) {
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('腎臓内科','腎臓内科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('小児科','小児科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('外科','外科'));
+      array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('神経内科','神経内科'));
       // 画像URL、アクションの配列
       $column = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder (
         '診療科選択2', '診療科を選択してください。', null, $actionArray);
@@ -199,6 +201,7 @@ foreach ($events as $event) {
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('形成外科','形成外科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('整形外科','整形外科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('皮膚科','皮膚科'));
+      array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('神経内科','神経内科'));
       // 画像URL、アクションの配列
       $column = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder (
         '診療科選択3', '診療科を選択してください。', null, $actionArray);
@@ -210,6 +213,7 @@ foreach ($events as $event) {
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('泌尿器科','泌尿器科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('産婦人科','産婦人科'));
       array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('眼科','眼科'));
+      array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ('神経内科','神経内科'));
       // 画像URL、アクションの配列
       $column = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder (
         '診療科選択4', '診療科を選択してください。', null, $actionArray);
