@@ -52,7 +52,8 @@ foreach ($events as $event) {
   if ($SectionName == '病院からのお知らせ'){
     //リッチメニューから「病院からのお知らせ」
     $messageStr = '外来診療日：月曜日～金曜日（祝日年末年始を除く） ';
-    $messageStr = $messageStr . "\r\n" . '午前：08:00～11:00';
+    $messageStr = $messageStr . "\r\n" . '午前：08:00～11:00（再来受診のみ11:30）';
+    $messageStr = $messageStr . "\r\n" . '　※整形外科の初診の受付は、午前10時までとなります。';
     $messageStr = $messageStr . "\r\n" . '午後：12:00～15:00（予約のみ）';
     $messageStr = $messageStr . "\r\n";
     $messageStr = $messageStr . "\r\n" . '※初診の場合は、かかりつけ医からの当院宛の紹介状をお持ちください。';
@@ -60,13 +61,13 @@ foreach ($events as $event) {
   } elseif($SectionName == '電話連絡') {
     //リッチメニューから「電話連絡」
     $messageStr = '電話番号：';
-    $messageStr = $messageStr . "\r\n" . '054-283-1450（代表）';
+    $messageStr = $messageStr . "\r\n" . '054-623-3111（代表）';
     $messageStr = $messageStr . "\r\n";
     $messageStr = $messageStr . "\r\n" . '予約受付時間：';
     $messageStr = $messageStr . "\r\n" . '平日 10:00～17:00';
     $messageStr = $messageStr . "\r\n";
     $messageStr = $messageStr . "\r\n" . 'ホームページ：';
-    $messageStr = $messageStr . "\r\n" . 'http://www.sbs-infosys.co.jp/';
+    $messageStr = $messageStr . "\r\n" . 'https://www.hospital.yaizu.shizuoka.jp/';
     $bot->replyText($event->getReplyToken(), $messageStr);
 
   } else {
@@ -117,8 +118,8 @@ foreach ($events as $event) {
         $reqtime = '103000';
       }
 
-      $jsonString = file_get_contents('http://35.190.234.51/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
-      //$jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
+      //$jsonString = file_get_contents('http://35.190.234.51/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
+      $jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
 
       // 文字列を連想配列に変換
       $obj = json_decode($jsonString, true);
