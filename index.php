@@ -112,7 +112,6 @@ foreach ($events as $event) {
       date_default_timezone_set('Asia/Tokyo');
       $reqtime = date("His");
       error_log($reqtime);
-
       $reqYMD = date("Ymd");
       error_log($reqYMD);
 
@@ -124,7 +123,8 @@ foreach ($events as $event) {
       */
         
       //$jsonString = file_get_contents('http://35.190.234.51/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
-      $jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
+      //$jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
+      $jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000012/' . $section_id . '/' . $reqYMD . '/000000/' . $reqtime);
 
       // 文字列を連想配列に変換
       $obj = json_decode($jsonString, true);
