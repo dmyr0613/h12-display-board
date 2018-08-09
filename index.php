@@ -113,11 +113,16 @@ foreach ($events as $event) {
       $reqtime = date("His");
       error_log($reqtime);
 
+      $reqYMD = date("Ymd");
+      error_log($reqYMD);
+
+      /*
       if ($reqtime > '140000' or $reqtime < '083000') {
         error_log("診察時間外のため、テスト的に10:30固定で問合せ");
         $reqtime = '103000';
       }
-
+      */
+        
       //$jsonString = file_get_contents('http://35.190.234.51/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
       $jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000001/' . $section_id . '/20180507/000000/' . $reqtime);
 
