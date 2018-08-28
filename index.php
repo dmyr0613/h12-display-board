@@ -128,7 +128,8 @@ foreach ($events as $event) {
     $reqYMD = date("Ymd");
     error_log($reqYMD);
 
-    $jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000012/1/' . $reqYMD . '/000000/' . $reqtime . '?name=' . base64_encode($SectionName));
+    //$jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000012/1/' . $reqYMD . '/000000/' . $reqtime . '?name=' . base64_encode($SectionName));
+    $jsonString = file_get_contents('https://primearch.jp/displaybd/db/last/0000000012/1/' . $reqYMD . '/000000/100000?name=' . base64_encode($SectionName));
     error_log('https://primearch.jp/displaybd/db/last/0000000012/1/' . $reqYMD . '/000000/' . $reqtime . '?name=' . base64_encode($SectionName));
 
     // 文字列を連想配列に変換
