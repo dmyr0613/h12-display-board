@@ -138,6 +138,7 @@ foreach ($events as $event) {
       error_log($key);
       $messageStr = $messageStr . "\r\n";
       $messageStr = $messageStr . "\r\n" . '診察室：' . $val["rName"];
+      $messageStr = $messageStr . "\r\n" . '医師：' . $val["doctorName"];
       $messageStr = $messageStr . "\r\n" . '現在診察中：' . $val["curNo"];
       $messageStr = $messageStr . "\r\n" . 'もうすぐ呼ばれる方：' . "\r\n" . $val["waitNo01"];
       if ($val["waitNo02"]>0) {
