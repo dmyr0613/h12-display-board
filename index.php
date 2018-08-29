@@ -78,25 +78,27 @@ foreach ($events as $event) {
     foreach ($obj as $key => $val){
       error_log($val["name"]);
 
-      //変数インクリメント
-      $colCnt++;
-      if ($colCnt == 1) {
-        //最初の列定義
-        $actionArray = array();
-      }
-      if ($colCnt <= 3) {
-        array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ($val["name"],$val["name"]));
-      }
-      if ($colCnt == 3) {
-        //最後の列定義
-        $column = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder (
-          '診療科選択' . $CarouselNum, '診療科を選択してください。', null, $actionArray);
-        // 配列に追加
-        array_push($columnArray, $column);
-        //変数初期化
-        $colCnt = 0;
-        //Carousel番号の変数インクリメント
-        $CarouselNum++;
+      if ($val["name"] <> '') {
+        //変数インクリメント
+        $colCnt++;
+        if ($colCnt == 1) {
+          //最初の列定義
+          $actionArray = array();
+        }
+        if ($colCnt <= 3) {
+          array_push($actionArray, new LINE\LINEBot\TemplateActionBuilder\MessageTemplateActionBuilder ($val["name"],$val["name"]));
+        }
+        if ($colCnt == 3) {
+          //最後の列定義
+          $column = new \LINE\LINEBot\MessageBuilder\TemplateBuilder\CarouselColumnTemplateBuilder (
+            '診療科選択' . $CarouselNum, '診療科を選択してください。', null, $actionArray);
+          // 配列に追加
+          array_push($columnArray, $column);
+          //変数初期化
+          $colCnt = 0;
+          //Carousel番号の変数インクリメント
+          $CarouselNum++;
+        }
       }
     }
 
