@@ -141,7 +141,7 @@ foreach ($events as $event) {
       error_log($key);
       $messageStr = $messageStr . "\r\n";
       $messageStr = $messageStr . "\r\n" . '診察室：' . $val["rName"];
-      if ($val["doctorName"] <> "．") {
+      if ($val["doctorName"] <> ".") {
         $messageStr = $messageStr . "\r\n" . '医師：' . $val["doctorName"];
       }
       $messageStr = $messageStr . "\r\n" . '現在診察中：' . $val["curNo"];
